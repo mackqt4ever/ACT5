@@ -1,0 +1,22 @@
+class Car:
+    def __init__(self, make, speed):
+        self._make = make 
+        self._speed = speed  
+   
+    @property
+    def speed(self):
+        return self._speed
+   
+    @speed.setter
+    def speed(self, value):
+        if value > 0:
+            self._speed = value
+        else:
+            print("Speed cannot be negative.")
+
+car = Car("Ford", 60)
+
+print(car.speed)  # Output: 60
+
+car.speed = -10 
+print(car.speed) 
